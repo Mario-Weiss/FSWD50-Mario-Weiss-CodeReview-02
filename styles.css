@@ -16,20 +16,25 @@ body {
 
 nav {
   background: black;
-  padding-left: 20px; }
+  padding-left: 15px;
+  margin: 0; }
 
 ul {
   margin: 0;
   padding: 0; }
   ul li {
     list-style: none;
-    display: inline-flex; }
+    display: inline-flex;
+    margin: 0;
+    paddin: 0; }
     ul li a {
       text-decoration: none;
       color: white;
-      padding: 5px 10px 5px 0; }
+      padding: 5px 10px 5px 5px;
+      transition: 0.5s; }
     ul li a:hover {
-      background: #ccc; }
+      background: #DEDEDE;
+      color: #500E10; }
 
 .date {
   text-align: right;
@@ -37,14 +42,15 @@ ul {
   padding: 6px 0; }
 
 main {
-  margin: 0 20px 0; }
+  margin: 0 15px 0; }
 
 .headline {
-  background: #DEDEDE; }
+  background: #DEDEDE;
+  margin-bottom: 11px !important;
+  padding-left: 10px; }
 
 .flex {
-  display: flex;
-  justify-content: space-between; }
+  display: flex; }
   .flex .content {
     width: 100%;
     margin-left: -8px; }
@@ -53,34 +59,70 @@ main {
     .flex .content .flex1, .flex .content .flex2 {
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 20px;
       justify-content: space-between; }
-      .flex .content .flex1 div, .flex .content .flex2 div {
-        background: black;
-        color: white;
-        width: 31%; }
-        .flex .content .flex1 div img, .flex .content .flex2 div img {
+      .flex .content .flex1 > div, .flex .content .flex2 > div {
+        position: relative;
+        width: 200px;
+        height: 160px; }
+        .flex .content .flex1 > div img, .flex .content .flex2 > div img {
+          max-width: 100%;
+          object-fit: cover; }
+        .flex .content .flex1 > div .text, .flex .content .flex2 > div .text {
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+          background: black;
           width: 100%; }
-    .flex .content .flex2 div {
-      width: 48% !important; }
+          .flex .content .flex1 > div .text p, .flex .content .flex2 > div .text p {
+            font-size: 14px;
+            margin: 0;
+            padding: 6px;
+            color: white; }
+    .flex .content .flex2 > div {
+      width: 305px;
+      height: 242px;
+      margin-bottom: 35px; }
+      .flex .content .flex2 > div img {
+        width: 100%; }
+      .flex .content .flex2 > div .text {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        background: black;
+        width: 100%; }
+        .flex .content .flex2 > div .text p {
+          font-size: 22px;
+          margin: 0;
+          padding: 15px 0 15px 10px;
+          color: white; }
 
 .banner {
-  min-width: 110px;
-  max-width: 110px;
+  min-width: 115px;
+  max-width: 115px;
   text-align: right; }
 
 .banner2 {
   width: 100%;
-  max-width: 100%; }
+  text-align: center;
+  margin-bottom: 10px; }
+  .banner2 img {
+    max-width: 100%; }
 
 footer {
   background: black;
   color: white; }
   footer div:first-child {
+    font-size: 18px;
+    padding: 5px 0 0 15px;
     text-align: left; }
   footer div:nth-child(2) {
-    text-align: right; }
+    text-align: right;
+    padding: 20px; }
   footer div:nth-child(3) {
-    text-align: center; }
+    text-align: center;
+    font-size: 14px;
+    padding: 10px; }
 
 .mobile {
   display: none; }
@@ -98,7 +140,7 @@ footer {
   nav ul {
     text-align: center; }
 
-  .flex1 div {
+  .flex1 > div {
     width: 48% !important; }
 
   footer div {
