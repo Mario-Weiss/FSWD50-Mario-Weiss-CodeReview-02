@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
 body {
+  min-width: 280px;
   max-width: 800px;
   margin: auto;
   font-family: "PT Sans Narrow", sans-serif;
-  font-size: 22px; }
+  font-size: 22px;
+  transition: 5s; }
 
 #hero {
   background: #500E10;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -20,17 +22,18 @@ nav {
   margin: 0; }
 
 ul {
+  list-style: none;
   margin: 0;
   padding: 0; }
   ul li {
-    list-style: none;
     display: inline-flex;
     margin: 0;
     paddin: 0; }
     ul li a {
       text-decoration: none;
       color: white;
-      padding: 5px 10px 5px 5px;
+      margin: 0;
+      padding: 2px 10px 2px 5px;
       transition: 0.5s; }
     ul li a:hover {
       background: #DEDEDE;
@@ -67,6 +70,7 @@ main {
         height: 160px; }
         .flex .content .flex1 > div img, .flex .content .flex2 > div img {
           max-width: 100%;
+          height: 100%;
           object-fit: cover; }
         .flex .content .flex1 > div .text, .flex .content .flex2 > div .text {
           position: absolute;
@@ -98,7 +102,7 @@ main {
           color: white; }
 
 .banner {
-  min-width: 115px;
+  min-width: 112px;
   max-width: 115px;
   text-align: right; }
 
@@ -129,21 +133,60 @@ footer {
 
 @media screen and (max-width: 768px) {
   #hero {
-    flex-direction: column; } }
-@media screen and (max-width: 480px) {
-  .desktop, .date {
+    flex-direction: column;
+    padding: 9px; }
+
+  .desktop {
     display: none; }
 
   .mobile {
     display: block; }
 
-  nav ul {
-    text-align: center; }
-
-  .flex1 > div {
-    width: 48% !important; }
+  nav {
+    padding: 0; }
+    nav ul {
+      text-align: center; }
+      nav ul li > a {
+        padding: 2px 2vw 2px 2vw; }
 
   footer div {
-    text-align: center !important; } }
+    text-align: center !important; }
+
+  main {
+    margin: 2.3vw; }
+
+  .headline {
+    margin: 0 0 1.6vw 0 !important;
+    padding-left: 6px; }
+
+  .headline2 {
+    margin: 0 0 2vw 0 !important; }
+
+  .flex .content {
+    margin: 0; }
+    .flex .content .flex1, .flex .content .flex2 {
+      margin: 0; }
+      .flex .content .flex1 > div, .flex .content .flex2 > div {
+        width: 43vw;
+        height: 36vw;
+        margin-bottom: 4vw; }
+        .flex .content .flex1 > div .text p, .flex .content .flex2 > div .text p {
+          font-size: 3.1vw;
+          padding: 3vw 0 3vw 1.4vw; }
+
+  footer {
+    margin-top: 10vw;
+    padding-bottom: 3vw; } }
+@media screen and (max-width: 480px) {
+  #hero {
+    flex-direction: row; }
+    #hero * {
+      padding-left: 3vw; }
+
+  .desktop2, .date {
+    display: none; } }
+/*	.flex1
+ * > div
+ * 	width: 48% !important */
 
 /*# sourceMappingURL=styles.css.map */
