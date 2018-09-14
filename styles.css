@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
 body {
-  min-width: 280px;
   max-width: 800px;
   margin: auto;
   font-family: "PT Sans Narrow", sans-serif;
-  font-size: 22px;
-  transition: 5s; }
+  font-size: 22px; }
 
 #hero {
   background: #500E10;
@@ -71,7 +69,10 @@ main {
         .flex .content .flex1 > div img, .flex .content .flex2 > div img {
           max-width: 100%;
           height: 100%;
-          object-fit: cover; }
+          object-fit: cover;
+          transition: 1s; }
+          .flex .content .flex1 > div img:hover, .flex .content .flex2 > div img:hover {
+            filter: hue-rotate(180deg); }
         .flex .content .flex1 > div .text, .flex .content .flex2 > div .text {
           position: absolute;
           bottom: 0px;
@@ -100,6 +101,12 @@ main {
           margin: 0;
           padding: 15px 0 15px 10px;
           color: white; }
+    .flex .content .article img {
+      width: 45%;
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      border-radius: 0 30px 0 30px; }
 
 .banner {
   min-width: 112px;
@@ -111,7 +118,10 @@ main {
   text-align: center;
   margin-bottom: 10px; }
   .banner2 img {
-    max-width: 100%; }
+    max-width: 100%;
+    transition: 1s; }
+    .banner2 img:hover {
+      filter: invert(100%); }
 
 footer {
   background: black;
@@ -127,6 +137,10 @@ footer {
     text-align: center;
     font-size: 14px;
     padding: 10px; }
+
+#warning {
+  display: none;
+  color: red; }
 
 .mobile {
   display: none; }
@@ -173,6 +187,8 @@ footer {
         .flex .content .flex1 > div .text p, .flex .content .flex2 > div .text p {
           font-size: 3.1vw;
           padding: 3vw 0 3vw 1.4vw; }
+    .flex .content .article {
+      font-size: 3.1vw; }
 
   footer {
     margin-top: 10vw;
@@ -185,8 +201,11 @@ footer {
 
   .desktop2, .date {
     display: none; } }
-/*	.flex1
- * > div
- * 	width: 48% !important */
+@media screen and (max-width: 280px) {
+  body * {
+    display: none; }
+
+  #warning {
+    display: block; } }
 
 /*# sourceMappingURL=styles.css.map */
