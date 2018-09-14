@@ -1,3 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
+body {
+  max-width: 800px;
+  margin: auto;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 22px; }
 
+#hero {
+  background: #500E10;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; }
+
+nav {
+  background: black;
+  padding-left: 20px; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style: none;
+    display: inline-flex; }
+    ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 5px 10px 5px 0; }
+    ul li a:hover {
+      background: #ccc; }
+
+.date {
+  text-align: right;
+  font-size: 16px;
+  padding: 6px 0; }
+
+main {
+  margin: 0 20px 0; }
+
+.headline {
+  background: #DEDEDE; }
+
+.flex {
+  display: flex;
+  justify-content: space-between; }
+  .flex .content {
+    width: 100%;
+    margin-left: -8px; }
+    .flex .content > div {
+      margin: 0 0 8px 8px; }
+    .flex .content .flex1, .flex .content .flex2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .flex .content .flex1 div, .flex .content .flex2 div {
+        background: black;
+        color: white;
+        width: 31%; }
+        .flex .content .flex1 div img, .flex .content .flex2 div img {
+          width: 100%; }
+    .flex .content .flex2 div {
+      width: 48% !important; }
+
+.banner {
+  min-width: 110px;
+  max-width: 110px;
+  text-align: right; }
+
+.banner2 {
+  width: 100%;
+  max-width: 100%; }
+
+footer {
+  background: black;
+  color: white; }
+  footer div:first-child {
+    text-align: left; }
+  footer div:nth-child(2) {
+    text-align: right; }
+  footer div:nth-child(3) {
+    text-align: center; }
+
+.mobile {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  #hero {
+    flex-direction: column; } }
+@media screen and (max-width: 480px) {
+  .desktop, .date {
+    display: none; }
+
+  .mobile {
+    display: block; }
+
+  nav ul {
+    text-align: center; }
+
+  .flex1 div {
+    width: 48% !important; }
+
+  footer div {
+    text-align: center !important; } }
 
 /*# sourceMappingURL=styles.css.map */
