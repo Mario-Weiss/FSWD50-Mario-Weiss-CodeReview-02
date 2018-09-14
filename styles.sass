@@ -13,6 +13,10 @@ body
 	flex-wrap: wrap
 	justify-content: space-between
 	align-items: center
+	img
+		transition: 1s
+		&:hover
+			filter: invert(100%)
 nav
 	background: black
 	padding-left: 15px
@@ -134,10 +138,10 @@ footer
 		text-align: center
 		font-size: 14px
 		padding: 10px
-#warning
+#warning, #warning1
 	display: none
 	color: red
-
+	text-align: center
 .mobile
 	display: none
 
@@ -191,9 +195,13 @@ footer
 			padding-left: 3vw
 	.desktop2, .date
 		display: none
-
 @media screen and (max-width: 280px)
 	body *
 		display: none
 	#warning
+		display: block
+@media print
+	body *
+		display: none
+	#warning1, #warning1 *
 		display: block

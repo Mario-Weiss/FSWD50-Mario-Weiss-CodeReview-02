@@ -13,6 +13,10 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center; }
+  #hero img {
+    transition: 1s; }
+    #hero img:hover {
+      filter: invert(100%); }
 
 nav {
   background: black;
@@ -138,9 +142,10 @@ footer {
     font-size: 14px;
     padding: 10px; }
 
-#warning {
+#warning, #warning1 {
   display: none;
-  color: red; }
+  color: red;
+  text-align: center; }
 
 .mobile {
   display: none; }
@@ -206,6 +211,12 @@ footer {
     display: none; }
 
   #warning {
+    display: block; } }
+@media print {
+  body * {
+    display: none; }
+
+  #warning1, #warning1 * {
     display: block; } }
 
 /*# sourceMappingURL=styles.css.map */
