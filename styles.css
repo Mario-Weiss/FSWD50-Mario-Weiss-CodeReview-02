@@ -19,6 +19,9 @@
   body * {
     display: none; }
 
+  #hero {
+    display: none !important; }
+
   #min_width {
     display: block; } }
 body {
@@ -26,6 +29,8 @@ body {
   margin: auto;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 22px; }
+  body *:not(p) {
+    transition: 1s; }
 
 #hero {
   background: #500E10;
@@ -35,6 +40,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center; }
+  #hero img {
+    transition: 2s; }
   #hero a img {
     transition: 1s; }
     #hero a img:hover {
