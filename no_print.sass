@@ -1,0 +1,10 @@
+#no_print
+	display: none
+	color: red
+	text-align: center
+
+@media print
+	body *
+		display: none
+	#no_print, #no_print *
+		display: block

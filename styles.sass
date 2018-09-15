@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow')
+@import no_print.sass
+@import min_width.sass
 
 body
 	max-width: 800px
@@ -13,7 +15,7 @@ body
 	flex-wrap: wrap
 	justify-content: space-between
 	align-items: center
-	img
+	a img
 		transition: 1s
 		&:hover
 			filter: invert(100%)
@@ -28,7 +30,7 @@ ul
 	li
 		display: inline-flex
 		margin: 0
-		paddin: 0
+		padding: 0
 		a
 			text-decoration: none
 			color: white
@@ -71,6 +73,7 @@ main
 					transition: 1s
 					&:hover
 						filter: hue-rotate(180deg)
+						
 						//	opacity: 0.5
 
 				.text
@@ -115,6 +118,10 @@ main
 	min-width: 112px
 	max-width: 115px
 	text-align: right
+	img
+		transition: 1s
+		&:hover
+			filter: hue-rotate(180deg)
 .banner2
 	width: 100%
 	text-align: center
@@ -138,10 +145,6 @@ footer
 		text-align: center
 		font-size: 14px
 		padding: 10px
-#warning, #warning1
-	display: none
-	color: red
-	text-align: center
 .mobile
 	display: none
 
@@ -195,13 +198,4 @@ footer
 			padding-left: 3vw
 	.desktop2, .date
 		display: none
-@media screen and (max-width: 280px)
-	body *
-		display: none
-	#warning
-		display: block
-@media print
-	body *
-		display: none
-	#warning1, #warning1 *
-		display: block
+
