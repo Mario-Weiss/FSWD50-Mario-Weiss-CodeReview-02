@@ -169,6 +169,49 @@ footer
 .mobile
 	display: none
 
+	#hero
+		flex-direction: column
+		padding: 9px
+	.desktop
+		opacity: 0
+		display: none
+	.mobile
+		display: block
+	nav
+		padding: 0
+		ul
+			text-align: center
+			li > a
+				padding: 2px 2vw 2px 2vw 
+	footer
+		div
+			text-align: center !important
+	main
+		margin: 2.3vw
+	.headline
+		margin: 0 0 1.6vw 0 !important
+		padding-left: 6px
+	.headline2
+		margin: 0 0 2vw 0 !important
+	.flex .content
+		margin: 0
+		.flex1, .flex2
+			margin: 0
+			> div
+				width: 43vw
+				height: 36vw
+				margin-bottom: 4vw
+				.text p
+					font-size: 3.1vw
+					padding: 3vw 0 3vw 1.4vw
+		.article
+			font-size: 3.1vw
+	footer
+		margin-top: 10vw
+		padding-bottom: 3vw
+
+
+
 // for tablets
 @media screen and (max-width: 768px)
 	#hero
@@ -219,16 +262,5 @@ footer
 			padding-left: 3vw
 	.desktop2, .date
 		display: none
-
-@media handheld, (pointer:none), (pointer:coarse)
-	#hero
-		flex-direction: row
-		*
-			padding-left: 3vw
-	.desktop2, .date
-		display: none
-@import min_width.sass
-@import no_print.sass
-
 @import min_width.sass
 @import no_print.sass

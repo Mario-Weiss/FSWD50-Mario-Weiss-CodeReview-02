@@ -227,6 +227,39 @@ footer {
 
   .desktop2, .date {
     display: none; } }
+@media handheld, (pointer: none), (pointer: coarse) {
+  #hero {
+    flex-direction: row; }
+    #hero * {
+      padding-left: 3vw; }
+
+  .desktop2, .date {
+    display: none; } }
+#min_width {
+  display: none;
+  color: red;
+  text-align: center; }
+
+@media screen and (max-width: 280px) {
+  body * {
+    display: none; }
+
+  #hero {
+    display: none !important; }
+
+  #min_width {
+    display: block; } }
+#no_print {
+  display: none;
+  color: red;
+  text-align: center; }
+
+@media print {
+  body * {
+    display: none; }
+
+  #no_print, #no_print * {
+    display: block; } }
 #min_width {
   display: none;
   color: red;
