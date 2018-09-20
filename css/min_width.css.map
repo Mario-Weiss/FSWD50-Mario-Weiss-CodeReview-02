@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAU;EACT,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,GAAG;EACV,UAAU,EAAE,MAAM;;AAEnB,oCAAoC;EACnC,MAAM;IACL,OAAO,EAAE,IAAI;;EACd,KAAK;IACJ,OAAO,EAAE,eAAe;;EACzB,UAAU;IACT,OAAO,EAAE,KAAK",
+"sources": ["min_width.sass"],
+"names": [],
+"file": "min_width.css"
+}

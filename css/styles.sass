@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow')
-@import no_print.sass
-@import min_width.sass
 
+*
+	margin: 0
+	padding: 0
 body
 	max-width: 800px
 	margin: auto
 	font-family: 'PT Sans Narrow', sans-serif
 	font-size: 22px
-	*:not(p)
-		transition: 1s
+	*:not(.article):not(p)
+		transition: 0.5s
 #hero
 	background: #500E10
 	margin: 0
@@ -59,12 +60,16 @@ main
 	.content
 		width: 100%
 		margin-left: -8px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-content: stretch
 		> div
-			margin: 0 0 8px 8px
+				margin: 0 0 8px 8px
 		.flex1, .flex2
 			display: flex
 			flex-wrap: wrap
-			margin-bottom: 20px
+			// margin-bottom: 20px
 			justify-content: space-between
 			> div
 				position: relative
@@ -77,8 +82,6 @@ main
 					transition: 1s
 					&:hover
 						filter: hue-rotate(180deg)
-						
-						//	opacity: 0.5
 
 				.text
 					position: absolute
@@ -90,13 +93,16 @@ main
 						font-size: 14px
 						//font-size: 1.6vw
 						margin: 0
+						
 						padding: 6px
 						color: white
 		.flex2
+			
 			> div
 				width: 305px
 				height: 242px
 				margin-bottom: 35px
+				
 				img
 					width: 100%
 				.text
@@ -118,23 +124,34 @@ main
 				margin-right: 15px
 				margin-bottom: 15px
 				border-radius: 0 30px 0 30px
+		.sepia
+			&:hover
+				filter: sepia(100%) !important
 .banner
 	min-width: 112px
 	max-width: 115px
+	// max-width: 100%
 	text-align: right
+	margin: 0 0 8px 0
 	img
 		transition: 1s
+		height: 100%
+		object-fit: cover
 		&:hover
 			filter: hue-rotate(180deg)
 .banner2
 	width: 100%
 	text-align: center
-	margin-bottom: 10px
+	margin: 10px 0
 	img
 		max-width: 100%
 		transition: 1s
 		&:hover
 			filter: invert(100%)
+.banner_box2
+	margin: 0 0 43px 0
+	img
+		height: auto
 footer
 	background: black
 	color: white
@@ -158,6 +175,7 @@ footer
 		flex-direction: column
 		padding: 9px
 	.desktop
+		opacity: 0
 		display: none
 	.mobile
 		display: block
@@ -193,7 +211,6 @@ footer
 	footer
 		margin-top: 10vw
 		padding-bottom: 3vw
-
 // for mobile devices with low res
 @media screen and (max-width: 480px)
 	#hero
@@ -202,4 +219,5 @@ footer
 			padding-left: 3vw
 	.desktop2, .date
 		display: none
-
+@import min_width.sass
+@import no_print.sass

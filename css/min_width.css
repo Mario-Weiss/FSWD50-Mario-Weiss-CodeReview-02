@@ -1,0 +1,16 @@
+#min_width {
+  display: none;
+  color: red;
+  text-align: center; }
+
+@media screen and (max-width: 280px) {
+  body * {
+    display: none; }
+
+  #hero {
+    display: none !important; }
+
+  #min_width {
+    display: block; } }
+
+/*# sourceMappingURL=min_width.css.map */
